@@ -1,0 +1,395 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(224, 229, 234);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-height: 100vh;
+  color: #1e1e2a;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 12px 30px;
+  margin: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo h1 {
+  width: 60px;
+  height: 60px;
+  background-color: blueviolet;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(138, 43, 226, 0.3);
+  transition: transform 0.2s;
+}
+
+.logo h1:hover {
+  transform: scale(1.05);
+}
+
+.logo h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: blueviolet;
+  letter-spacing: 0.3px;
+}
+
+.uflex {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.uflex li a {
+  text-decoration: none;
+  color: #2d2d3a;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.uflex li a:hover {
+  background-color: rgba(138, 43, 226, 0.1);
+  color: blueviolet;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  color: #1e1e2a;
+}
+
+.hero p {
+  color: #6b6b7a;
+  font-size: 1.05rem;
+}
+
+/* ===== BLOG CONTAINER ===== */
+main {
+  padding: 0 30px;
+  margin-bottom: 40px;
+}
+
+.blog-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* ===== BLOG CARD ===== */
+.blog-card {
+  background-color: white;
+  width: 350px;
+  max-width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== IMAGE ===== */
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover img {
+  transform: scale(1.04);
+}
+
+/* ===== BLOG INFO ===== */
+.blog-info {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.category {
+  color: blueviolet;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  background-color: rgba(138, 43, 226, 0.1);
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.blog-info h2 {
+  margin: 12px 0 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e1e2a;
+  line-height: 1.3;
+}
+
+.blog-info p {
+  color: #6b6b7a;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.blog-info small {
+  color: #999;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+/* ===== READ MORE ===== */
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  color: blueviolet;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s, transform 0.2s;
+  width: fit-content;
+}
+
+.read-more:hover {
+  color: #6a1fb0;
+  transform: translateX(4px);
+  text-decoration: underline;
+}
+
+/* ===== MESSAGE (Loading / Empty) ===== */
+.message {
+  background-color: white;
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.message h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e1e2a;
+}
+
+.message p {
+  color: #6b6b7a;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #6b6b7a;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #cfd4da;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .blog-card {
+    width: calc(50% - 25px);
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+    margin: 16px;
+    padding: 14px 20px;
+    text-align: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .uflex {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .uflex li a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .hero {
+    padding: 30px 15px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 0 16px;
+  }
+
+  .blog-card {
+    width: 100%;
+  }
+
+  .blog-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .blog-info p {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 12px 14px;
+    margin: 12px;
+    border-radius: 14px;
+  }
+
+  .logo h1 {
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+    border-radius: 10px;
+  }
+
+  .logo h2 {
+    font-size: 1rem;
+  }
+
+  .uflex {
+    gap: 8px;
+  }
+
+  .uflex li a {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+
+  .hero {
+    padding: 24px 12px 12px;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 0 12px;
+  }
+
+  .blog-card {
+    border-radius: 14px;
+  }
+
+  .blog-card img {
+    height: 180px;
+  }
+
+  .blog-info {
+    padding: 18px 16px;
+  }
+
+  .blog-info h2 {
+    font-size: 1.1rem;
+  }
+
+  .blog-info p {
+    font-size: 0.88rem;
+  }
+
+  .message {
+    padding: 40px 16px;
+    border-radius: 14px;
+  }
+
+  .message h2 {
+    font-size: 1.25rem;
+  }
+
+  .message p {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ===== SWEETALERT FIX ===== */
+.swal2-container {
+  z-index: 10000;
+}

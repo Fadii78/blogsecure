@@ -1,0 +1,321 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(224, 229, 234);
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 18px;
+  background-color: white;
+  padding: 12px 30px;
+  margin: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.logo h1 {
+  width: 60px;
+  height: 60px;
+  background-color: blueviolet;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  box-shadow: 0 6px 15px rgba(138, 43, 226, 0.3);
+  transition: transform 0.2s;
+}
+
+.logo h1:hover {
+  transform: scale(1.05);
+}
+
+.logo h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: blueviolet;
+  letter-spacing: 0.3px;
+
+}
+
+.uflex {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.uflex li a {
+  text-decoration: none;
+  color: #2d2d3a;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.uflex li a:hover {
+  background-color: rgba(138, 43, 226, 0.1);
+  color: blueviolet;
+}
+
+/* ===== MAIN ===== */
+main {
+  margin: 30px;
+  padding: 32px 28px;
+  border-radius: 24px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+main h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #1e1e2a;
+  padding-bottom: 6px;
+}
+
+main p {
+  color: #6b6b7a;
+  padding-bottom: 20px;
+  font-size: 1rem;
+  border-bottom: 1px solid #f0f0f5;
+  margin-bottom: 6px;
+}
+
+main label {
+  padding-block: 8px 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #2d2d3a;
+}
+
+main input,
+main textarea {
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1.5px solid #d0d0dc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  background-color: #fafaff;
+  width: 100%;
+  font-family: inherit;
+}
+
+main input:focus,
+main textarea:focus {
+  border-color: blueviolet;
+  box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.15);
+  background-color: white;
+}
+
+main textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+main button {
+  padding: 14px;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s, transform 0.1s;
+  width: 100%;
+}
+
+main button:hover {
+  background-color: #6a1fb0;
+}
+
+main button:active {
+  transform: scale(0.98);
+}
+
+main button h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding-inline: 30px;
+  margin-top: 10px;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #cfd4da;
+  margin-bottom: 6px;
+}
+
+footer p {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  width: fit-content;
+  margin-inline: auto;
+  color: #4a4a5a;
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 14px 20px;
+    margin: 16px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .uflex {
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .uflex li a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  main {
+    margin: 16px;
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  main h1 {
+    font-size: 1.7rem;
+  }
+
+  main p {
+    font-size: 0.95rem;
+    padding-bottom: 18px;
+  }
+
+  main input,
+  main textarea {
+    padding: 13px 14px;
+    font-size: 0.95rem;
+  }
+
+  main button {
+    padding: 13px;
+    font-size: 1rem;
+  }
+
+  footer {
+    padding-inline: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 12px 14px;
+    margin: 12px;
+    border-radius: 14px;
+  }
+
+  .logo h1 {
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+    border-radius: 10px;
+  }
+
+  .logo h2 {
+    font-size: 1rem;
+  }
+
+  .uflex {
+    gap: 8px;
+  }
+
+  .uflex li a {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+
+  main {
+    margin: 12px;
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  main p {
+    font-size: 0.9rem;
+  }
+
+  main input,
+  main textarea {
+    padding: 12px 13px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+
+  main textarea {
+    min-height: 130px;
+  }
+
+  main button {
+    padding: 12px;
+    font-size: 0.95rem;
+    border-radius: 12px;
+  }
+
+  main button h3 {
+    font-size: 0.95rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+    padding-bottom: 20px;
+  }
+}
+
+/* SweetAlert2 fix */
+.swal2-container {
+  z-index: 10000;
+}

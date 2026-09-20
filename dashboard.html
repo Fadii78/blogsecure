@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BlogSecure - Dashboard</title>
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-storage-compat.js"></script>
+
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <div class="logo">
+        <h1>B</h1>
+
+        <h2>BlogSecure</h2>
+      </div>
+
+      <ul class="uflex">
+        <li>
+          <a href="signup.html">Sign Up</a>
+        </li>
+
+        <li>
+          <a href="login.html">Login</a>
+        </li>
+
+        <li>
+          <a href="dashboard.html">Dashboard</a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <h1>Latest Blogs</h1>
+
+      <p>Read the latest blogs published on BlogSecure.</p>
+    </section>
+
+    <!-- BLOGS -->
+
+    <main>
+      <div id="blogContainer" class="blog-container">
+        <div class="message">
+          <h2>Loading Blogs...</h2>
+
+          <p>Please wait while blogs are loading.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <hr />
+
+      <p>© 2026 BlogSecure</p>
+    </footer>
+
+    <!-- FIREBASE CONFIG -->
+
+    <script src="api.js"></script>
+
+    <script src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

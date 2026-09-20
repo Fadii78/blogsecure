@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-storage-compat.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="signbody">
+    <div class="signtop">
+      <div class="brand">
+        <h1>B</h1>
+        <h2>BlogSecure</h2>
+      </div>
+
+      <div class="signup">
+        <h2>Create our account</h2>
+        <p>join our blogging Community</p>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="example@gmail.com" />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="" placeholder="Enter password" />
+        <!-- <label for="">Confirm Password</label>
+        <input type="password" name="" id=" " placeholder="Confirm password" required /> -->
+
+        <button onclick="signbtn()" type="button">Sign UP</button>
+
+        <span>Already have an account?<a href="login.html"> Login</a></span>
+      </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

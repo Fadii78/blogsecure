@@ -1,0 +1,244 @@
+/* ===== RESET & BASE ===== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(224, 229, 234);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.signbody {
+  background-color: rgb(224, 229, 234);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== WRAPPER ===== */
+.signtop {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ===== BRAND (B + BlogSecure) ===== */
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.brand h1 {
+  width: 60px;
+  height: 60px;
+  background-color: blueviolet;
+  border-radius: 14px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(138, 43, 226, 0.3);
+  transition: transform 0.2s;
+}
+
+.brand h1:hover {
+  transform: scale(1.05);
+}
+
+.brand h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: blueviolet;
+  letter-spacing: 0.3px;
+}
+
+/* ===== CARD ===== */
+.signup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: padding 0.2s;
+}
+
+.signup h2 {
+  font-size: 2rem;
+  padding-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #1e1e2a;
+}
+
+.signup p {
+  color: #6b6b7a;
+  padding-bottom: 24px;
+  font-size: 1rem;
+  border-bottom: 1px solid #f0f0f5;
+}
+
+.signup label {
+  padding-block: 8px 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #2d2d3a;
+}
+
+.signup input {
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1.5px solid #d0d0dc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  background-color: #fafaff;
+  width: 100%;
+}
+
+.signup input:focus {
+  border-color: blueviolet;
+  box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.15);
+  background-color: white;
+}
+
+.signup button {
+  padding: 14px;
+  color: white;
+  background-color: blueviolet;
+  border-radius: 14px;
+  border: none;
+  margin-top: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, transform 0.1s;
+  width: 100%;
+}
+
+.signup button:hover {
+  background-color: #6a1fb0;
+}
+
+.signup button:active {
+  transform: scale(0.98);
+}
+
+.signup span {
+  padding-top: 24px;
+  margin-inline: auto;
+  font-size: 0.95rem;
+  color: #4a4a5a;
+  text-align: center;
+  display: block;
+}
+
+.signup span a {
+  text-decoration: none;
+  color: blueviolet;
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.signup span a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 560px) {
+  body {
+    padding: 12px;
+  }
+
+  .brand {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .brand h1 {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .brand h2 {
+    font-size: 1.3rem;
+  }
+
+  .signup {
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .signup h2 {
+    font-size: 1.8rem;
+  }
+
+  .signup p {
+    font-size: 0.95rem;
+    padding-bottom: 18px;
+  }
+
+  .signup input {
+    padding: 13px 14px;
+    font-size: 0.95rem;
+  }
+
+  .signup button {
+    padding: 13px;
+    font-size: 1rem;
+  }
+
+  .signup span {
+    padding-top: 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand h1 {
+    width: 46px;
+    height: 46px;
+    font-size: 1.3rem;
+  }
+
+  .brand h2 {
+    font-size: 1.15rem;
+  }
+
+  .signup {
+    padding: 20px 14px;
+  }
+
+  .signup h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .signtop {
+    max-width: 540px;
+  }
+}
+
+/* SweetAlert2 container fix */
+.swal2-container {
+  z-index: 10000;
+}

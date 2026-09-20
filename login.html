@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-storage-compat.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="signbody">
+    <div class="signtop">
+      <div class="brand">
+        <h1>B</h1>
+        <h2>BlogSecure</h2>
+      </div>
+
+      <div class="signup">
+        <h2>Welcome back</h2>
+        <p>Log in to continue to your dashboard</p>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="example@gmail.com" />
+        <label for="password">Password</label>
+        <input type="password" name="" id="password" placeholder="Enter password" />
+        <!-- <label for="">Confirm Password</label>
+        <input type="password" name="" id="" placeholder="Confirm password" /> -->
+
+        <button onclick="loginbtn()" type="button">Log in</button>
+
+        <span>New to BlogSecure?<a href="signup.html"> Create an account</a></span>
+      </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

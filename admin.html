@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-storage-compat.js"></script>
+    <link rel="stylesheet" href="admin.css" />
+    <!-- <style>
+      body {
+        background-color: rgb(228, 233, 237);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 70px;
+        align-items: center;
+        border-radius: 18px;
+        background-color: white;
+        padding: 10px 30px;
+        margin: 30px;
+      }
+
+      .uflex {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        color: black;
+      }
+
+      .uflex li a {
+        text-decoration: none;
+      }
+      .logo {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .logo h1 {
+        width: 60px;
+        height: 60px;
+        padding-top: 10px;
+        background-color: blueviolet;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+      }
+
+      main {
+        margin: 30px;
+        padding: 30px;
+        border-radius: 18px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+      }
+      main input {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-style: none;
+        border-radius: 12px;
+        border: 1px solid black;
+      }
+      main label {
+        margin-block: 10px;
+      }
+      main textarea {
+        padding: 20px;
+        resize: vertical;
+        height: 160px;
+        border-radius: 12px;
+      }
+      main button {
+        padding: 20px;
+        background-color: blueviolet;
+        border-style: none;
+        border-radius: 12px;
+        color: white;
+        font-weight: bold;
+      }
+      footer {
+        padding-inline: 30px;
+      }
+      footer p{
+        padding-top: 20px;
+        padding-bottom: 30px;
+        width: 150px;
+        margin-inline: auto;
+      }
+    </style> -->
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>B</h1>
+        <h2>BlogSecure</h2>
+      </div>
+      <div>
+        <ul class="uflex">
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="admin.html">Admin</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <h1>Add new blog</h1>
+      <p>Publish a new article to the platform</p>
+
+      <label for="title">Blog title</label>
+      <input type="text" id="title" placeholder="Blog title" />
+      <label for="category">Category</label>
+      <input type="text" id="category" placeholder="Category" />
+      <label for="content">Content</label>
+      <textarea name="" id="content" placeholder="Write your blog post here..."></textarea>
+      <label for="blog_image">Cover image (URL)</label>
+      <input type="url" id="blog_image" name="image" placeholder="https://picsum.photos/seed/1/600/300" />
+      <button onclick="addblog()"><h3>Publish blog</h3></button>
+    </main>
+    <footer>
+      <hr />
+      <p>© 2026 BlogSecure</p>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
