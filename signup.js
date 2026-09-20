@@ -20,7 +20,7 @@ let signbtn = () => {
         Swal.fire({
           icon: "success",
           title: "Signed Up",
-          text: email + password,
+          text: email,
         }).then(() => {
           document.getElementById("email").value = "";
           document.getElementById("password").value = "";
